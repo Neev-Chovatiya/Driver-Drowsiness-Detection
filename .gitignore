@@ -1,0 +1,26 @@
+# Python cache (any folder)
+**/__pycache__/
+*.py[cod]
+
+# Backup folders (any folder)
+**/backups/
+
+# Original dataset videos
+data/row/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,83 @@
+{
+  "suite_a_regression": {
+    "audio_buzzer": "PASSED",
+    "ear_counter_behavior": "PASSED",
+    "mar_counter_behavior": "PASSED",
+    "arbitration_and_face_loss": "PASSED"
+  },
+  "suite_b_ml_integration": {
+    "pipeline_verification": "PASSED",
+    "valid_vector": "PASSED",
+    "extreme_and_invalid_values": "PASSED",
+    "model_fallback": "PASSED",
+    "missing_face_behavior": "PASSED"
+  },
+  "suite_c_dataset_replay": {
+    "0.mov": {
+      "session": "Alert (0)",
+      "sampled_frames": 120,
+      "face_detect_rate_pct": 100.0,
+      "mean_probs": [
+        0.361,
+        0.4141,
+        0.225
+      ],
+      "state_distribution": {
+        "ALERT": 29,
+        "LOW VIGILANT": 91,
+        "DROWSY": 0,
+        "NO FACE": 0
+      },
+      "mean_inference_latency_ms": 28.93,
+      "total_time_sec": 10.24
+    },
+    "5.mov": {
+      "session": "Low Vigilance (5)",
+      "sampled_frames": 120,
+      "face_detect_rate_pct": 100.0,
+      "mean_probs": [
+        0.3647,
+        0.4374,
+        0.1979
+      ],
+      "state_distribution": {
+        "ALERT": 40,
+        "LOW VIGILANT": 80,
+        "DROWSY": 0,
+        "NO FACE": 0
+      },
+      "mean_inference_latency_ms": 29.57,
+      "total_time_sec": 10.23
+    },
+    "10.mov": {
+      "session": "Drowsy (10)",
+      "sampled_frames": 120,
+      "face_detect_rate_pct": 100.0,
+      "mean_probs": [
+        0.2107,
+        0.404,
+        0.3853
+      ],
+      "state_distribution": {
+        "ALERT": 2,
+        "LOW VIGILANT": 73,
+        "DROWSY": 45,
+        "NO FACE": 0
+      },
+      "mean_inference_latency_ms": 30.26,
+      "total_time_sec": 10.48
+    }
+  },
+  "suite_d_realtime_benchmark": {
+    "fps_baseline": 16.09,
+    "fps_hybrid": 17.61,
+    "ml_inference_latency_ms": 28.14,
+    "scenario_tests": {
+      "Normal Blinking": "PASSED",
+      "Sustained Eye Closure": "PASSED",
+      "Brief Yawn": "PASSED",
+      "Sustained Yawn": "PASSED",
+      "Head Turn / Occlusion": "PASSED"
+    }
+  }
+}

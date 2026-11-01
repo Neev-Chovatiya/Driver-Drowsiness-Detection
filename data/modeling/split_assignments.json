@@ -1,0 +1,43 @@
+{
+  "random_seed": 42,
+  "test_size_fraction": 0.2,
+  "train_participant_count": 24,
+  "test_participant_count": 6,
+  "train_participants": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "31",
+    "32",
+    "33",
+    "35",
+    "36"
+  ],
+  "test_participants": [
+    "09",
+    "10",
+    "16",
+    "18",
+    "24",
+    "34"
+  ],
+  "scikit_learn_version": "1.9.0",
+  "joblib_version": "1.6.0",
+  "created_at": "2026-10-28T00:08:00"
+}

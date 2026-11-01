@@ -1,0 +1,393 @@
+{
+  "experiment_name": "expB_with_missing_indicator",
+  "features": [
+    "ear_left",
+    "ear_right",
+    "ear",
+    "mar",
+    "mouth_over_ear",
+    "interocular_dist",
+    "missing_face"
+  ],
+  "sample_counts": {
+    "total_samples": 55983,
+    "train_samples": 44461,
+    "test_samples": 11522,
+    "train_participants": 24,
+    "test_participants": 6
+  },
+  "models": {
+    "DummyClassifier": {
+      "fit_time_sec": 0.182,
+      "cv_group_metrics": {
+        "mean_balanced_accuracy": 0.3333,
+        "std_balanced_accuracy": 0.0,
+        "mean_macro_f1": 0.1688
+      },
+      "frame_level_test_metrics": {
+        "accuracy": 0.3256,
+        "balanced_accuracy": 0.3333,
+        "macro_precision": 0.1085,
+        "macro_recall": 0.3333,
+        "macro_f1": 0.1637,
+        "per_class": {
+          "alert": {
+            "precision": 0.3256,
+            "recall": 1.0,
+            "f1": 0.4912
+          },
+          "low_vigilant": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "drowsy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            3751,
+            0,
+            0
+          ],
+          [
+            3856,
+            0,
+            0
+          ],
+          [
+            3915,
+            0,
+            0
+          ]
+        ]
+      },
+      "video_level_test_metrics": {
+        "accuracy": 0.3333,
+        "balanced_accuracy": 0.3333,
+        "macro_precision": 0.1111,
+        "macro_recall": 0.3333,
+        "macro_f1": 0.1667,
+        "per_class": {
+          "alert": {
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          "low_vigilant": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "drowsy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            0
+          ]
+        ],
+        "video_count": 18
+      },
+      "cm_frame_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_dummyclassifier_frame_cm.png",
+      "cm_video_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_dummyclassifier_video_cm.png"
+    },
+    "LogisticRegression": {
+      "fit_time_sec": 0.842,
+      "cv_group_metrics": {
+        "mean_balanced_accuracy": 0.3706,
+        "std_balanced_accuracy": 0.0442,
+        "mean_macro_f1": 0.3611
+      },
+      "frame_level_test_metrics": {
+        "accuracy": 0.3393,
+        "balanced_accuracy": 0.3369,
+        "macro_precision": 0.3235,
+        "macro_recall": 0.3369,
+        "macro_f1": 0.3236,
+        "per_class": {
+          "alert": {
+            "precision": 0.2987,
+            "recall": 0.2023,
+            "f1": 0.2413
+          },
+          "low_vigilant": {
+            "precision": 0.2472,
+            "recall": 0.2396,
+            "f1": 0.2434
+          },
+          "drowsy": {
+            "precision": 0.4246,
+            "recall": 0.5686,
+            "f1": 0.4861
+          }
+        },
+        "confusion_matrix": [
+          [
+            759,
+            1682,
+            1310
+          ],
+          [
+            1225,
+            924,
+            1707
+          ],
+          [
+            557,
+            1132,
+            2226
+          ]
+        ]
+      },
+      "video_level_test_metrics": {
+        "accuracy": 0.2778,
+        "balanced_accuracy": 0.2778,
+        "macro_precision": 0.1889,
+        "macro_recall": 0.2778,
+        "macro_f1": 0.2222,
+        "per_class": {
+          "alert": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "low_vigilant": {
+            "precision": 0.1667,
+            "recall": 0.1667,
+            "f1": 0.1667
+          },
+          "drowsy": {
+            "precision": 0.4,
+            "recall": 0.6667,
+            "f1": 0.5
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            1,
+            1,
+            4
+          ],
+          [
+            1,
+            1,
+            4
+          ]
+        ],
+        "video_count": 18
+      },
+      "cm_frame_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_logisticregression_frame_cm.png",
+      "cm_video_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_logisticregression_video_cm.png"
+    },
+    "RandomForest": {
+      "fit_time_sec": 8.311,
+      "cv_group_metrics": {
+        "mean_balanced_accuracy": 0.3681,
+        "std_balanced_accuracy": 0.0261,
+        "mean_macro_f1": 0.3522
+      },
+      "frame_level_test_metrics": {
+        "accuracy": 0.4962,
+        "balanced_accuracy": 0.4957,
+        "macro_precision": 0.5084,
+        "macro_recall": 0.4957,
+        "macro_f1": 0.4979,
+        "per_class": {
+          "alert": {
+            "precision": 0.551,
+            "recall": 0.4537,
+            "f1": 0.4977
+          },
+          "low_vigilant": {
+            "precision": 0.4168,
+            "recall": 0.527,
+            "f1": 0.4655
+          },
+          "drowsy": {
+            "precision": 0.5573,
+            "recall": 0.5065,
+            "f1": 0.5307
+          }
+        },
+        "confusion_matrix": [
+          [
+            1702,
+            1577,
+            472
+          ],
+          [
+            721,
+            2032,
+            1103
+          ],
+          [
+            666,
+            1266,
+            1983
+          ]
+        ]
+      },
+      "video_level_test_metrics": {
+        "accuracy": 0.7222,
+        "balanced_accuracy": 0.7222,
+        "macro_precision": 0.7833,
+        "macro_recall": 0.7222,
+        "macro_f1": 0.7167,
+        "per_class": {
+          "alert": {
+            "precision": 0.75,
+            "recall": 0.5,
+            "f1": 0.6
+          },
+          "low_vigilant": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75
+          },
+          "drowsy": {
+            "precision": 1.0,
+            "recall": 0.6667,
+            "f1": 0.8
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            3,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            1,
+            1,
+            4
+          ]
+        ],
+        "video_count": 18
+      },
+      "cm_frame_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_randomforest_frame_cm.png",
+      "cm_video_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_randomforest_video_cm.png"
+    },
+    "LinearSVM": {
+      "fit_time_sec": 2.287,
+      "cv_group_metrics": {
+        "mean_balanced_accuracy": 0.3879,
+        "std_balanced_accuracy": 0.0396,
+        "mean_macro_f1": 0.3528
+      },
+      "frame_level_test_metrics": {
+        "accuracy": 0.3988,
+        "balanced_accuracy": 0.3988,
+        "macro_precision": 0.3582,
+        "macro_recall": 0.3988,
+        "macro_f1": 0.3569,
+        "per_class": {
+          "alert": {
+            "precision": 0.3925,
+            "recall": 0.5113,
+            "f1": 0.4441
+          },
+          "low_vigilant": {
+            "precision": 0.2426,
+            "recall": 0.0765,
+            "f1": 0.1163
+          },
+          "drowsy": {
+            "precision": 0.4396,
+            "recall": 0.6084,
+            "f1": 0.5104
+          }
+        },
+        "confusion_matrix": [
+          [
+            1918,
+            498,
+            1335
+          ],
+          [
+            1859,
+            295,
+            1702
+          ],
+          [
+            1110,
+            423,
+            2382
+          ]
+        ]
+      },
+      "video_level_test_metrics": {
+        "accuracy": 0.3889,
+        "balanced_accuracy": 0.3889,
+        "macro_precision": 0.3,
+        "macro_recall": 0.3889,
+        "macro_f1": 0.3333,
+        "per_class": {
+          "alert": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          "low_vigilant": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "drowsy": {
+            "precision": 0.4,
+            "recall": 0.6667,
+            "f1": 0.5
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            4
+          ],
+          [
+            1,
+            1,
+            4
+          ]
+        ],
+        "video_count": 18
+      },
+      "cm_frame_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_linearsvm_frame_cm.png",
+      "cm_video_plot": "F:\\DrowsinessDetector\\data\\modeling\\confusion_matrices\\expB_with_missing_indicator_linearsvm_video_cm.png"
+    }
+  }
+}

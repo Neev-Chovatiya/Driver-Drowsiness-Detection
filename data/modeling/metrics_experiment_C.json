@@ -1,0 +1,706 @@
+{
+  "experiment_c_model_path": "data/modeling\\models\\expC_calibrated_rf.joblib",
+  "features": [
+    "ear_left_norm",
+    "ear_right_norm",
+    "ear_norm",
+    "mar_delta",
+    "mouth_over_ear_norm",
+    "scale_ratio",
+    "missing_face"
+  ],
+  "class_mapping": {
+    "0": 0,
+    "5": 1,
+    "10": 2
+  },
+  "bootstrap_execution_metadata": {
+    "bootstrap_iteration_count": 1000,
+    "random_seed": 42,
+    "runtime_seconds": 56.866,
+    "warnings_encountered": 0,
+    "warning_details": [],
+    "n_held_out_clusters": 6,
+    "cluster_limitation_disclosure": "Only six (6) held-out participant clusters are available in the test set. Clustered bootstrap confidence intervals with small cluster counts (N=6) exhibit discrete sensitivity and should be interpreted with caution."
+  },
+  "evaluation_sample_counts": {
+    "total_test_frames": 11338,
+    "excluded_calibration_frames": 912,
+    "held_out_participants_count": 6,
+    "held_out_participants": [
+      "09",
+      "10",
+      "16",
+      "18",
+      "24",
+      "34"
+    ],
+    "video_count": 18
+  },
+  "cv_group_metrics": {
+    "mean_balanced_accuracy": 0.3804,
+    "mean_macro_f1": 0.364
+  },
+  "experiment_b_metrics": {
+    "frame_level": {
+      "accuracy": 0.4968,
+      "balanced_accuracy": 0.4957,
+      "macro_precision": 0.5078,
+      "macro_recall": 0.4957,
+      "macro_f1": 0.4982,
+      "per_class": {
+        "alert": {
+          "precision": 0.5384,
+          "recall": 0.4536,
+          "f1": 0.4924
+        },
+        "low_vigilant": {
+          "precision": 0.4227,
+          "recall": 0.527,
+          "f1": 0.4691
+        },
+        "drowsy": {
+          "precision": 0.5624,
+          "recall": 0.5065,
+          "f1": 0.533
+        }
+      },
+      "confusion_matrix": [
+        [
+          1618,
+          1509,
+          440
+        ],
+        [
+          721,
+          2032,
+          1103
+        ],
+        [
+          666,
+          1266,
+          1983
+        ]
+      ]
+    },
+    "video_level": {
+      "accuracy": 0.7222,
+      "balanced_accuracy": 0.7222,
+      "macro_precision": 0.7833,
+      "macro_recall": 0.7222,
+      "macro_f1": 0.7167,
+      "per_class": {
+        "alert": {
+          "precision": 0.75,
+          "recall": 0.5,
+          "f1": 0.6
+        },
+        "low_vigilant": {
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.75
+        },
+        "drowsy": {
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8
+        }
+      },
+      "confusion_matrix": [
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          1,
+          1,
+          4
+        ]
+      ],
+      "video_count": 18,
+      "diagnostic_rates": {
+        "false_alert_rate": "3/6 (50.0%)",
+        "missed_drowsiness_rate": "1/6 (16.7%)"
+      }
+    },
+    "bootstrap_ci_95": {
+      "frame_balanced_accuracy_95ci": [
+        0.3971,
+        0.5718
+      ],
+      "frame_macro_f1_95ci": [
+        0.399,
+        0.5692
+      ],
+      "video_accuracy_95ci": [
+        0.5556,
+        0.8889
+      ],
+      "video_macro_f1_95ci": [
+        0.4993,
+        0.8885
+      ],
+      "n_clusters": 6,
+      "n_bootstrap": 1000
+    }
+  },
+  "experiment_c_metrics": {
+    "frame_level": {
+      "accuracy": 0.5174,
+      "balanced_accuracy": 0.5218,
+      "macro_precision": 0.5141,
+      "macro_recall": 0.5218,
+      "macro_f1": 0.503,
+      "per_class": {
+        "alert": {
+          "precision": 0.5273,
+          "recall": 0.7073,
+          "f1": 0.6042
+        },
+        "low_vigilant": {
+          "precision": 0.4995,
+          "recall": 0.2827,
+          "f1": 0.361
+        },
+        "drowsy": {
+          "precision": 0.5154,
+          "recall": 0.5755,
+          "f1": 0.5438
+        }
+      },
+      "confusion_matrix": [
+        [
+          2523,
+          153,
+          891
+        ],
+        [
+          1539,
+          1090,
+          1227
+        ],
+        [
+          723,
+          939,
+          2253
+        ]
+      ]
+    },
+    "video_level": {
+      "accuracy": 0.6111,
+      "balanced_accuracy": 0.6111,
+      "macro_precision": 0.6167,
+      "macro_recall": 0.6111,
+      "macro_f1": 0.5833,
+      "per_class": {
+        "alert": {
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.75
+        },
+        "low_vigilant": {
+          "precision": 0.5,
+          "recall": 0.3333,
+          "f1": 0.4
+        },
+        "drowsy": {
+          "precision": 0.75,
+          "recall": 0.5,
+          "f1": 0.6
+        }
+      },
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "video_count": 18,
+      "diagnostic_rates": {
+        "false_alert_rate": "0/6 (0.0%)",
+        "missed_drowsiness_rate": "1/6 (16.7%)"
+      }
+    },
+    "bootstrap_ci_95": {
+      "frame_balanced_accuracy_95ci": [
+        0.4002,
+        0.6392
+      ],
+      "frame_macro_f1_95ci": [
+        0.3636,
+        0.6309
+      ],
+      "video_accuracy_95ci": [
+        0.4444,
+        0.7778
+      ],
+      "video_macro_f1_95ci": [
+        0.3781,
+        0.7758
+      ],
+      "n_clusters": 6,
+      "n_bootstrap": 1000
+    }
+  },
+  "comparison_deltas": {
+    "delta_frame_balanced_acc": 0.0261,
+    "delta_frame_macro_f1": 0.0048,
+    "delta_video_accuracy": -0.1111,
+    "delta_video_macro_f1": -0.1334
+  },
+  "individual_video_predictions": {
+    "experiment_b": [
+      {
+        "participant_id": "09",
+        "video_filename": "0.mp4",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.4050350131170789,
+          0.27136730537275117,
+          0.32359768151016977
+        ],
+        "sample_count": 576
+      },
+      {
+        "participant_id": "09",
+        "video_filename": "10.mp4",
+        "true_idx": 2,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.3866597720496613,
+          0.27077578633673594,
+          0.3425644416136033
+        ],
+        "sample_count": 661
+      },
+      {
+        "participant_id": "09",
+        "video_filename": "5.mp4",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.2675740273713566,
+          0.4245888489245349,
+          0.30783712370410865
+        ],
+        "sample_count": 613
+      },
+      {
+        "participant_id": "10",
+        "video_filename": "0.MOV",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.6683728599892814,
+          0.16356766571984216,
+          0.16805947429087617
+        ],
+        "sample_count": 513
+      },
+      {
+        "participant_id": "10",
+        "video_filename": "10.MOV",
+        "true_idx": 2,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.2518964895082642,
+          0.36446873759179743,
+          0.38363477289993764
+        ],
+        "sample_count": 629
+      },
+      {
+        "participant_id": "10",
+        "video_filename": "5.MOV",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.2424036123516889,
+          0.3812844803629006,
+          0.3763119072854103
+        ],
+        "sample_count": 621
+      },
+      {
+        "participant_id": "16",
+        "video_filename": "0.MOV",
+        "true_idx": 0,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.2683701081638602,
+          0.3895933634125318,
+          0.3420365284236083
+        ],
+        "sample_count": 443
+      },
+      {
+        "participant_id": "16",
+        "video_filename": "10.MOV",
+        "true_idx": 2,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.26336778619452095,
+          0.42921454158263844,
+          0.30741767222284044
+        ],
+        "sample_count": 604
+      },
+      {
+        "participant_id": "16",
+        "video_filename": "5.MOV",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.2789521062123498,
+          0.36443510889505043,
+          0.3566127848925996
+        ],
+        "sample_count": 604
+      },
+      {
+        "participant_id": "18",
+        "video_filename": "0.mov",
+        "true_idx": 0,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.2843023590754809,
+          0.4538434186963364,
+          0.26185422222818233
+        ],
+        "sample_count": 584
+      },
+      {
+        "participant_id": "18",
+        "video_filename": "10.mov",
+        "true_idx": 2,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.18832505159191784,
+          0.3573299013402203,
+          0.45434504706786355
+        ],
+        "sample_count": 640
+      },
+      {
+        "participant_id": "18",
+        "video_filename": "5.mov",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.303211651229533,
+          0.42093856782002376,
+          0.2758497809504437
+        ],
+        "sample_count": 599
+      },
+      {
+        "participant_id": "24",
+        "video_filename": "0.mp4",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.5226970772294874,
+          0.3163715389606205,
+          0.1609313838098923
+        ],
+        "sample_count": 707
+      },
+      {
+        "participant_id": "24",
+        "video_filename": "10.mp4",
+        "true_idx": 2,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.18633036493487976,
+          0.38999558304703846,
+          0.4236740520180819
+        ],
+        "sample_count": 768
+      },
+      {
+        "participant_id": "24",
+        "video_filename": "5.mp4",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.33301033139536323,
+          0.34456498051080175,
+          0.32242468809383507
+        ],
+        "sample_count": 729
+      },
+      {
+        "participant_id": "34",
+        "video_filename": "0.mov",
+        "true_idx": 0,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.30923620389725986,
+          0.4174634673682939,
+          0.2733003287344455
+        ],
+        "sample_count": 744
+      },
+      {
+        "participant_id": "34",
+        "video_filename": "10.mp4",
+        "true_idx": 2,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.30247280401206583,
+          0.09180593964563481,
+          0.6057212563422993
+        ],
+        "sample_count": 613
+      },
+      {
+        "participant_id": "34",
+        "video_filename": "5.mov",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.2920948115597409,
+          0.4164548521097337,
+          0.2914503363305253
+        ],
+        "sample_count": 690
+      }
+    ],
+    "experiment_c": [
+      {
+        "participant_id": "09",
+        "video_filename": "0.mp4",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.49756430405082447,
+          0.25126935223129665,
+          0.25116634371787927
+        ],
+        "sample_count": 576
+      },
+      {
+        "participant_id": "09",
+        "video_filename": "10.mp4",
+        "true_idx": 2,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.4587406118586009,
+          0.24825999392706727,
+          0.2929993942143318
+        ],
+        "sample_count": 661
+      },
+      {
+        "participant_id": "09",
+        "video_filename": "5.mp4",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.16171727733588293,
+          0.4304293890950606,
+          0.4078533335690562
+        ],
+        "sample_count": 613
+      },
+      {
+        "participant_id": "10",
+        "video_filename": "0.MOV",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.4252637724554992,
+          0.23358947469934552,
+          0.3411467528451549
+        ],
+        "sample_count": 513
+      },
+      {
+        "participant_id": "10",
+        "video_filename": "10.MOV",
+        "true_idx": 2,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.08404753435420963,
+          0.2564003115273852,
+          0.6595521541184048
+        ],
+        "sample_count": 629
+      },
+      {
+        "participant_id": "10",
+        "video_filename": "5.MOV",
+        "true_idx": 1,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.080446147955366,
+          0.3112159106631103,
+          0.6083379413815239
+        ],
+        "sample_count": 621
+      },
+      {
+        "participant_id": "16",
+        "video_filename": "0.MOV",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.6243326679293759,
+          0.23257119362604692,
+          0.14309613844457753
+        ],
+        "sample_count": 443
+      },
+      {
+        "participant_id": "16",
+        "video_filename": "10.MOV",
+        "true_idx": 2,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.3625097306905019,
+          0.37365147935573606,
+          0.2638387899537617
+        ],
+        "sample_count": 604
+      },
+      {
+        "participant_id": "16",
+        "video_filename": "5.MOV",
+        "true_idx": 1,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.546479357782807,
+          0.29671013398626944,
+          0.15681050823092268
+        ],
+        "sample_count": 604
+      },
+      {
+        "participant_id": "18",
+        "video_filename": "0.mov",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.5774015887002311,
+          0.24776215261105358,
+          0.17483625868871577
+        ],
+        "sample_count": 584
+      },
+      {
+        "participant_id": "18",
+        "video_filename": "10.mov",
+        "true_idx": 2,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.280714736679761,
+          0.29053450613149395,
+          0.42875075718874517
+        ],
+        "sample_count": 640
+      },
+      {
+        "participant_id": "18",
+        "video_filename": "5.mov",
+        "true_idx": 1,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.4144300867643368,
+          0.3978009968148152,
+          0.18776891642084823
+        ],
+        "sample_count": 599
+      },
+      {
+        "participant_id": "24",
+        "video_filename": "0.mp4",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.4784710360768438,
+          0.2727804674241072,
+          0.2487484964990498
+        ],
+        "sample_count": 707
+      },
+      {
+        "participant_id": "24",
+        "video_filename": "10.mp4",
+        "true_idx": 2,
+        "pred_idx": 2,
+        "mean_probs": [
+          0.099559510328791,
+          0.28292113255932605,
+          0.6175193571118823
+        ],
+        "sample_count": 768
+      },
+      {
+        "participant_id": "24",
+        "video_filename": "5.mp4",
+        "true_idx": 1,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.2754620537180635,
+          0.47315194422584883,
+          0.2513860020560886
+        ],
+        "sample_count": 729
+      },
+      {
+        "participant_id": "34",
+        "video_filename": "0.mov",
+        "true_idx": 0,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.41645525355453294,
+          0.29173671757795205,
+          0.2918080288675149
+        ],
+        "sample_count": 744
+      },
+      {
+        "participant_id": "34",
+        "video_filename": "10.mp4",
+        "true_idx": 2,
+        "pred_idx": 1,
+        "mean_probs": [
+          0.06233805347365834,
+          0.5592162281943016,
+          0.3784457183320402
+        ],
+        "sample_count": 613
+      },
+      {
+        "participant_id": "34",
+        "video_filename": "5.mov",
+        "true_idx": 1,
+        "pred_idx": 0,
+        "mean_probs": [
+          0.43948253634651646,
+          0.28386965142656834,
+          0.2766478122269149
+        ],
+        "sample_count": 690
+      }
+    ]
+  }
+}

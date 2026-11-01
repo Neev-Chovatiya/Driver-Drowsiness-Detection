@@ -432,8 +432,8 @@ python data/modeling/geometry_validator.py
 
 ## 👨‍💻 Developer Profile
 
-Developed by **Neev Chovatiya**[cite: 3]  
-Computer Science & Engineering Student @ *The Maharaja Sayajirao University of Baroda*[cite: 3]
+Developed by **Neev Chovatiya**  
+Computer Science & Engineering Student @ *The Maharaja Sayajirao University of Baroda*
 
 * 💼 **LinkedIn**: [linkedin.com/in/neev-chovatiya-1071222a0](https://linkedin.com/in/neev-chovatiya-1071222a0)
 * 🐙 **GitHub**: [github.com/Neev-Chovatiya](https://github.com/Neev-Chovatiya)
